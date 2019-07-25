@@ -8,7 +8,7 @@ function populateForm() {
   //DONE: Add an <option> tag inside the form's select for each product
   var selectElement = document.getElementById("items");
   for (var i in Product.allProducts) {
-    var opt = document.createElement('option');
+    var opt = document.createElement("option");
     opt.textContent = Product.allProducts[i].name;
     selectElement.appendChild(opt);
   }
@@ -31,10 +31,11 @@ function handleSubmit(event) {
 // TODO: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
   // TODO: suss out the item picked from the select list
-  
+  document.getElementById("");
   // TODO: get the quantity
 
   // TODO: using those, create a new Cart item instance
+
 }
 
 // TODO: Save the contents of the cart to Local Storage

@@ -19,8 +19,9 @@ function renderCart() {
 
 // TODO: Remove all of the rows (tr) in the cart table (tbody)
 function clearCart() {
-  document.getElementByTagName("tbody").deleteRow(i);
-} //Might need query Selector for the table first and then do a for loop for cart items length and the delet rows with that number of cart items
+  var tbody = document.getElementsByTagName("tbody");
+  tbody[0].innerHTML = '';
+} 
 
 // TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
 function showCart() {
