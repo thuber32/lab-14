@@ -23,14 +23,18 @@ function renderCart() {
 
 //DONE: Remove all of the rows (tr) in the cart table (tbody)
 function clearCart() {
-  var tbody = document.getElementsByTagName('tbody');
-  tbody[0].innerHTML = '';
+  var tableRows = document.querySelectorAll('#cart tbody tr');
+  for (var i = 0; i < tableRows.length; i++){
+    if (tableRows[i]){
+        tableRows[i].remove();
+    }
+  }
 } 
 
 // DONE: Fill in the <tr>'s under the <tbody> for each item in the cart
 function showCart() {
   // DONE: Find the table body
-  var tbody = document.getElementsByTagName('tbody');
+  var tbody = document.getElementsByTagName(' #cart tbody');
   // DONE: Iterate over the items in the cart
   for (var i = 0; i < Cart.length; i++){
   // DONE: Create a TR
@@ -39,6 +43,7 @@ function showCart() {
   var td = document.createElement('td');
   var button = document.createElement('button');
   button.textContent = ' X ';
+  
   td.appendChild(button);
   tr.appendChild(td);
   //?? TODO: Add the TR to the TBODY and each of the TD's to the TR

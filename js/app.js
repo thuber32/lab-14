@@ -8,9 +8,9 @@
 var Cart = function(item,quantity) {
   this.item = item;
   this.quantity = quantity;
-  Cart.cartItems.push(this);
+  Cart.allItems.push(this);
 }
-Cart.cartItems = [];
+Cart.allItems = [];
 // Product Contructor
 var Product = function(filePath, name) {
   this.filePath = filePath;
