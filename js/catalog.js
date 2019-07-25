@@ -7,11 +7,12 @@
 function populateForm() {
   //DONE: Add an <option> tag inside the form's select for each product
   var selectElement = document.getElementById('items');
-  for (var i in Product.allProducts) {
-    var opt = document.createElement('option');
-    opt.value = Product.allProducts[i].name;
-    opt.textContent = Product.allProducts[i].name;
-    selectElement.appendChild(opt);
+  
+  for (var i = 0; i < Product.allProducts.length; i++) {
+    var listItem = document.createElement('option');
+    listItem.textContent = Product.allProducts[i].name;
+    listItem.setAttribute('value', Product.allProducts[i].name);
+    selectElement.appendChild(listItem);
   }
 }
 
@@ -32,15 +33,11 @@ function handleSubmit(event) {
 //DONE: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
   //DONE: suss out the item picked from the select list
-  var selectElement = document.getElementById('items');
-  var item = selectElement.value;
-  selectElement.selectedIndex=0;
+  var selectedItem= document.getElementById('items').value;
   //DONE: get the quantity
-  var numberElement= document.getElementById('quantity');
-  var qty = numberElement.value;
-  numberElement.value = '';
+  var qty= document.getElementById('quantity').value;
   // DONE: using those, create a new Cart item instance
-  Cart.push({'item':item, 'quantity': qty});
+  var newCart = new Cart(selectedItem, qty);
 }
 
 //DONE: Save the contents of the cart to Local Storage
@@ -50,19 +47,33 @@ function saveCartToLocalStorage() {
 
 //DONE: Update the cart count in the header nav with the number of items in the Cart
 function updateCounter() {
-    document.getElementsById('itemCount').textContent = '(' + Cart.allItems.length + ")";
+  // var itemCount = Cart.allItems.legth;
+  // var countUpdate = document.getElementById('itemCount');
+  // countUpdate.textConten = itemCount;
+  document.getElementsById('itemCount').textContent = '(' + Cart.allItems.length + ")";
 }
 
 //DONE: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
   //DONE: Get the item and quantity from the form
-  var selectElement = document.getElementById('items').value;
-  var itemQty = document.getElementById('quantity').value;
+  var item = document.getElementById('items').value;
+  var quantity = document.getElementById('quantity').value;
   
   //DONE: Add a new element to the cartContents div with that information
   var cartContents = document.getElementById('cartContents');
   var summary = quantity + ' : ' + item;
-  contentOutput.appendChild(document.createElement('div')).textContent = summary;
+  cartContents.appendChild(document.createElement('div')).textContent = summary;
+
+  /*alternate idea for updating cart
+var quantity = document.getElementById('quantity');
+var item = document.getElementById('items');
+var contents = document.getElementById('cartContents');
+var list = document.createElement('ul');
+var listItem = document.createElement('li');
+var data = JSON.pare(localStorage.getItem('cart'));
+console.log(data);
+
+  */
 }
 
 // Set up the "submit" event listener on the form.
