@@ -1,1 +1,79 @@
 /* TODO: Make it awesome */
+body{
+    background-color: #eeeff0;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    margin: 30px;
+}
+
+.logo header{
+    background-color:#4A545D;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo{
+    display: inline-block;
+    width: 40%;
+}
+
+.logo img {
+    float: left;
+    z-index: 100;
+}
+ .logo h1{ 
+    font-size: 4rem;
+    color: #dc7726;
+    float: left;
+    margin: 15px;
+    font-weight: 800;
+    padding: 15px;
+ }
+
+ nav{
+    float: right;
+    width: 60%; 
+ }
+
+ nav ul{
+    list-style: none;  
+}
+ 
+nav li{
+    float: right;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a{
+    transform-style: none;
+    color: #eeeff0;
+}
+
+main {
+    position: relative;
+    padding: 100px;
+    
+}
+p{  
+font-family: 'Montserrat', Helvetica,  Arial, sans-serif sans-serif;
+}
+
+footer{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin:0;
+    padding: 15px;
+    height: 60px;
+    background-color: #4A545D;
+}
+
+footer p{
+    padding: 30px 15px 0px 30px;
+}
