@@ -50,7 +50,7 @@ function updateCounter() {
   // var itemCount = Cart.allItems.legth;
   // var countUpdate = document.getElementById('itemCount');
   // countUpdate.textConten = itemCount;
-  document.getElementsById('itemCount').textContent = '(' + Cart.allItems.length + ")";
+  document.getElementById('itemCount').textContent = '(' + Cart.allItems.length + ")";
 }
 
 //DONE: As you add items into the cart, show them (item & quantity) in the cart preview div

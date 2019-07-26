@@ -34,17 +34,17 @@ function clearCart() {
 // DONE: Fill in the <tr>'s under the <tbody> for each item in the cart
 function showCart() {
   // DONE: Find the table body
-  var tbody = document.getElementsByTagName('#cart tbody');
+  var tbody = document.getElementsByTagName('tbody')[0];
   // DONE: Iterate over the items in the cart
   for (var i = 0; i < Cart.length; i++){
   // DONE: Create a TR
-  var tr = document.createElement('tr');
-  // DONE: Create a TD for the delete link, quantity,  and the item
   var td = document.createElement('td');
+  // DONE: Create a TD for the delete link, quantity,  and the item
   td.textContent  = ' X '; 
   td.classList.add('remover');
   td.id = i;
   //?? TODO: Add the TR to the TBODY and each of the TD's to the TR
+  var tr = document.createElement('tr');
   tbody.appendChild(tr);
   tr.appendChild(td);
   tr.appendChild(document.createElement('td')).textContent = Cart[i].quantity;
