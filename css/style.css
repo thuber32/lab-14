@@ -9,7 +9,7 @@ body{
 .logo header{
     background-color:#4A545D;
     width: 100%;
-    height: 100px;
+    height: 150px;
     overflow: hidden;
     position: absolute;
     top: 0;
@@ -21,44 +21,66 @@ body{
     width: 40%;
 }
 
-.logo img {
+.logoImage {
+    background-image: url("../img/bus-transparent.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 50px;
     float: left;
     z-index: 100;
 }
  .logo h1{ 
-    font-size: 4rem;
+    font-size: 5rem;
     color: #dc7726;
     float: left;
-    margin: 15px;
+    margin: 30px 15px 15px 15px;
     font-weight: 800;
     padding: 15px;
  }
 
  nav{
     float: right;
-    width: 60%; 
+    width: 40%; 
+    margin-top: 50px;
  }
 
  nav ul{
-    list-style: none;  
+    list-style: none; 
+    
 }
  
 nav li{
     float: right;
     padding: 15px;
     text-align: center;
+    color: #eeeff0;
 }
 
 nav a{
     transform-style: none;
-    color: #eeeff0;
 }
 
 main {
     position: relative;
     padding: 100px;
-    
+    display: inline-block;
 }
+
+.deck {
+    margin: 0px 60px;
+    padding: 30px;
+}
+
+.deck h1, legend{
+    font-size: 2rem;
+    padding-bottom: 30px;
+}
+
+.col-1{
+    float:left;
+}
+
 p{  
 font-family: 'Montserrat', Helvetica,  Arial, sans-serif sans-serif;
 }
@@ -76,4 +98,5 @@ footer{
 
 footer p{
     padding: 30px 15px 0px 30px;
+    color: #eeeff0;
 }

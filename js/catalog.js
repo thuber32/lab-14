@@ -36,7 +36,7 @@ function addSelectedItemToCart() {
   var selectedItem= document.getElementById('items').value;
   //DONE: get the quantity
   var qty= document.getElementById('quantity').value;
-  // DONE: using those, create a new Cart item instance
+  //DONE: using those, create a new Cart item instance
   var newCart = new Cart(selectedItem, qty);
 }
 
@@ -51,6 +51,14 @@ function updateCounter() {
   // var countUpdate = document.getElementById('itemCount');
   // countUpdate.textConten = itemCount;
   document.getElementById('itemCount').textContent = '(' + Cart.allItems.length + ")";
+
+/*  // this will add up all of the items in the cart
+var total = 0;
+for(var in Cart.allItems){
+  total += Cart.allItems[i].quantity;
+} 
+counter.textContent = total;
+*/
 }
 
 //DONE: As you add items into the cart, show them (item & quantity) in the cart preview div
@@ -64,16 +72,6 @@ function updateCartPreview() {
   var summary = quantity + ' : ' + item;
   cartContents.appendChild(document.createElement('div')).textContent = summary;
 
-  /*alternate idea for updating cart
-var quantity = document.getElementById('quantity');
-var item = document.getElementById('items');
-var contents = document.getElementById('cartContents');
-var list = document.createElement('ul');
-var listItem = document.createElement('li');
-var data = JSON.pare(localStorage.getItem('cart'));
-console.log(data);
-
-  */
 }
 
 // Set up the "submit" event listener on the form.

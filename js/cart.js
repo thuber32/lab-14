@@ -43,7 +43,7 @@ function showCart() {
   td.textContent  = ' X '; 
   td.classList.add('remover');
   td.id = i;
-  //?? TODO: Add the TR to the TBODY and each of the TD's to the TR
+  //DONE: Add the TR to the TBODY and each of the TD's to the TR
   var tr = document.createElement('tr');
   tbody.appendChild(tr);
   tr.appendChild(td);
@@ -60,6 +60,7 @@ function removeItemFromCart(event) {
     Cart.splice(event.target.id, 1);
   // TODO: Save the cart back to local storage
   localStorage.setItem('cart', JSON.stringify(Cart));
+  //same thing as line 62 localStorage['cart'] = JSON.stringify(Cart));
   // TODO: Re-draw the cart table
   renderCart();
 }
