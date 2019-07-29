@@ -9,6 +9,9 @@ function populateForm() {
   var selectElement = document.getElementById('items');
   
   for (var i = 0; i < Product.allProducts.length; i++) {
+    // var imageHolder = document.getElementById('div');
+    // imageHolder.setAttribute('class', 'image ' + Product.allProducts[i].name);
+    // imageHolder.setAttribute('data-name', Product.allProducts[i].name);
     var listItem = document.createElement('option');
     listItem.textContent = Product.allProducts[i].name;
     listItem.setAttribute('value', Product.allProducts[i].name);
