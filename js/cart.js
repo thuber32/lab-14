@@ -66,4 +66,3 @@ function removeItemFromCart(event) {
 }
 }
 renderCart();
-

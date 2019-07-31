@@ -7,7 +7,7 @@ body{
 }
 
 .logo header{
-    background-color:#4A545D;
+    border-bottom: solid 5px rgba(74, 84, 93,0.9);
     width: 100%;
     height: 150px;
     overflow: hidden;
@@ -39,10 +39,19 @@ body{
     padding: 15px;
  }
 
+ a,
+ a:hover,
+ a:visited,
+ a:active {
+     color:inherit;
+ }
+
+
  nav{
     float: right;
     width: 40%; 
     margin-top: 50px;
+    color: 
  }
 
  nav ul{
@@ -51,14 +60,15 @@ body{
 }
  
 nav li{
-    float: right;
+    float:right;
     padding: 15px;
     text-align: center;
-    color: #eeeff0;
 }
 
 nav a{
     transform-style: none;
+    font-size:1.2rem;
+    color: #eeeff0;
 }
 
 main {
