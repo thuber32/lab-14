@@ -6,8 +6,7 @@ body{
     margin: 30px;
 }
 
-.logo header{
-    border-bottom: solid 5px rgba(74, 84, 93,0.9);
+.logo {
     width: 100%;
     height: 150px;
     overflow: hidden;
@@ -91,8 +90,31 @@ main {
     float:left;
 }
 
+.card {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+input {
+    width: 150px;
+    height: 50px;
+}
+select {
+    width: 150px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    color: #eeeff0;
+    background-color: #dc7726;  
+}
 p{  
 font-family: 'Montserrat', Helvetica,  Arial, sans-serif sans-serif;
+}
+
+.submit {
+	animation-duration: 1s;
+	animation-name: flash;
+    animation-iteration-count: 1;
 }
 
 footer{
